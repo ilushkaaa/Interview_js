@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+    <script type="text/javascript">
+      function test() {
+        let arr = [];
+
+        for (let i = 0; i < 10000; i++) {
+          for (let j = 0; j < 10000; j++) {
+            arr.push(i);
+          }
+        }
+      }
+      // После загрузки страницы текст в элементе root меняется с задержкой
+      // Почему это происходит и как это исправить
+      window.onload = () => {
+        const container = document.getElementById('root');
+        container.innerHTML = 'Hello, hell!';
+
+        test();
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #root {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      Hello, world!
+    </div>
+  </body>
+</html>

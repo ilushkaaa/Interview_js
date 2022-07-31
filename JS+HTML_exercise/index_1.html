@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+    <script type="text/javascript">
+      window.onload = () => {
+        const button = document.getElementById('button');
+        
+        // При клике на кнопку должен появляться кубик, который плавно перемещается вправо на 200 пикселей, но что-то сломалось
+        // Нужно починить анимацию
+        button.onclick = () => {
+          const container = document.getElementById('root');
+
+          const element = document.createElement('div');
+          container.appendChild(element);
+
+          element.className = 'element';
+          element.classList.add('move');
+        }
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #root {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .element {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 50px;
+        height: 50px;
+        background-color: brown;
+        transition: transform 0.5s ease-in;
+      }
+
+      .move {
+        transform: translateX(200px);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <button id="button">Click</button>
+    </div>
+  </body>
+</html>

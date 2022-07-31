@@ -1,2 +1,3 @@
 # Interview_js
-https://github.com/ilushkaaa/ilushkaaa.git
+1. git clone https://github.com/ilushkaaa/ilushkaaa.git
+2. npm install
