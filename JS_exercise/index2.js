@@ -1,19 +1,4 @@
 /**
- * 1 задание
- * Реализовать метод get, который возвращает значение по полному пути в объекте. Если путь неверный, то вернуть null
- */
-const testObject = {
-    user: {
-        name: "Bob"
-    }
-}
-
-// Должны успешно выполниться
-console.log(get(testObject, "user.name")); // Bob
-console.log(get(testObject, "user.surname")); // null
-
-/**
- * 2 задание
  * Римские цифры представлены следующими различными символами: I, V, X, L, C, D, M
  * Значения соответственно:
  * I 1
@@ -37,8 +22,6 @@ console.log(get(testObject, "user.surname")); // null
  * 
  * Реализовать метод getRomanToInt, которая будет преобразовывать римские значения в целые числа.
  */
-
-
 
 // Должны успешно выполняться
 console.log(getRomanToInt("III")); // 3
